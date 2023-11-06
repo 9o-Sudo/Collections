@@ -1,0 +1,84 @@
+\documentclass[12pt]{article}
+	
+\usepackage[margin=1in]{geometry}		% For setting margins
+\usepackage{amsmath}				% For Math
+\usepackage{fancyhdr}				% For fancy header/footer
+\usepackage{graphicx}				% For including figure/image
+\usepackage{cancel}					% To use the slash to cancel out stuff in work
+
+%%%%%%%%%%%%%%%%%%%%%%
+% Set up fancy header/footer
+\pagestyle{fancy}
+\fancyhead[LO,L]{Amir H. Hazini (218245696)}
+\fancyhead[CO,C]{PHYS2040 - Homework 2-3}
+\fancyhead[RO,R]{\today}
+\fancyfoot[LO,L]{}
+\fancyfoot[CO,C]{\thepage}
+\fancyfoot[RO,R]{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+%%\noindent \textit{A uniformly charged dielectric gel having charge density $\rho_v = \rho_o$ and dielectric constant of $\epsilon_r = 2$ is enclosed inside a dielectric shell with dielectric constant of $\epsilon_r = 5$ as shown in the figure. The dielectric shell is surrounded by free space ($\epsilon_r = 1$). Determine E, $\Phi$, D, P in all regions.}
+
+%%\begin{figure}[!h] 
+%%	\begin{centering}
+		%%\includegraphics[keepaspectratio = true, width = 2in]{image.PNG}
+		%%\caption{Given scenario.}
+%%	\end{centering}
+%%\end{figure}
+
+\section{Galilean and Lorentz Transformation}
+\noindent \textbf{Question 1.a)} Describe what happens to the angle, $\alpha = \tan^{-1}\left(\frac{v}{c}\right)$, and, thus, the transformed axes in Fig. 5.17 in the text, as the relative velocity of the frames $S$ and $S'$ approaches zero.\\
+\\
+\noindent \textbf{Question 1.b)} What happens as the speed $v$ approaches the speed of light?\\
+\\
+\noindent \textbf{Question 1.c)} Provide sketches on graph paper of the situations $\beta = \beta_1 = \frac{1}{4}$, $\beta = \beta_2 = \frac{1}{2}$, $\beta = \beta_3 = \frac{3}{4}$.\\
+\\
+\noindent \textbf{Question 2)} Galilean relativity: A woman standing still at a train station watches two girls throwing a tennis ball in a moving train. Suppose the train is moving east with a constant speed of $25 \, \text{m/s}$, and one of the girls throws the ball with a speed of $10 \, \text{m/s}$ with respect to herself towards the other girl, who is $5 \, \text{m}$ west from her. What is the velocity of the ball as observed by the woman on the station? Explain your reasoning.\\
+\\
+\noindent \textbf{Question 3)} In a frame $S$, two events are observed by Max: event 1: a pion ($\pi$ meson) is created at rest at the origin, and event 2: the pion disintegrates (decays) after time $\tau$. Susan is an observer in frame $S'$, and is moving in the positive direction along the positive $x$-axis, with speed $v$. Susan observes the same two events in her frame. The two frames coincide at time $t = t' = 0$.\\
+\\
+\noindent \textbf{Question 3.a)} Find the positions and timings of these two events in Susan’s frame according to the Galilean transformation.\\
+\\
+\noindent \textbf{Question 3.b)} What are the positions and timings of the two events in Susan’s frame according to the Lorentz transformation?\\
+\\
+Provide details of how you calculated your results, and explain the differences between the answers (a) and (b).\\
+\\
+\underline{Electric Flux Density:}
+	\begin{align*}
+		{x}'=\gamma (x-vt)\\
+		{t}'=\gamma (x-vt)\\
+		{\gamma}= 
+		\oint_S \vec{D} \cdot \hat{n} &= Q_{en} \\
+		\int_0^\pi \int_0^{2\pi} D_r r^2 sin\theta d\phi d\theta &= Q_{en}\\	
+		4\pi r^2 D_r &= Q_{en}
+	\end{align*}
+
+\section{Lorentz Transformation: Velocity Addition}
+\noindent \textbf{Question 1)} A space ship flies past earth at 0.90c. As it goes by it fires a bullet in the forward
+direction at 0.95c with respect to the rocket. What is the bullet’s speed with respect
+to earth?\\
+\\
+\noindent \textbf{Question 2)} Now look at a related problem: a space ship flying past earth at 0.90c. As it goes
+by it fires a laser. Use the relativistic velocity addition to show at what speed the
+laser beam is recorded by an earth observer.\\
+\\
+\noindent \textbf{Question 3)} What is the relative velocity of two space ships if one fires a missile at the other
+at 0.85c and the other observes it to approach at 0.99c?\\
+\\
+
+	
+Final Answer Summary:
+		
+\begin{tabular}{| c | c | c | c |}
+\hline
+& Region 1 ($r<a$)& Region 2 ($a\leq r < b$)& Region 3 ($r\geq b$)\\ \hline
+$\vec{D}~(C/m^2)$ & $\frac{\rho_o r}{3} \hat{r}$ & $\frac{\rho_o a^3}{3 r^2} \hat{r}$ & $\frac{\rho_o a^3}{3 r^2} \hat{r}$\\
+$\vec{E}~(V/m)$ & $\frac{\rho_o r}{6 \epsilon_o} \hat{r}$ & $\frac{1}{5 \epsilon_o} \frac{\rho_o a^3}{3 r^2} \hat{r}$ & $\frac{1}{\epsilon_o} \frac{\rho_o a^3}{3 r^2} \hat{r}$\\
+$\vec{P}~(C/m^2)$ & $\frac{\rho_o r}{6} \hat{r}$ & $\frac{4\rho_o a^3}{15 r^2} \hat{r}$ & $0 \hat{r}$\\
+$\Phi~(V)$ &  $\frac{\rho_o a^2}{\epsilon_o}\left[ \frac{a}{3b} + \frac{1}{15} + \frac{1}{12}\right] - \frac{\rho_o}{\epsilon_o}\left[\frac{a^3}{15b} + \frac{r^2}{12}\right]$ & $\frac{\rho_o a^3}{3 \epsilon_o b} + \frac{\rho_o a^3}{15 \epsilon_o r} - \frac{\rho_o a^3}{15 \epsilon_o b}$ & $\frac{\rho_o a^3}{3\epsilon_o r}$\\ \hline
+\end{tabular}
+
+\end{document}
